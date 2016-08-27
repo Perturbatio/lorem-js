@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width">
+	<meta name="author" content="$">
+	<title>Example 1</title>
+
+
+	<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
+	<style type="text/css">
+		article {
+			margin: 1em;
+		}
+	</style>
+</head>
+<body>
+<main>
+
+	<div class="pure-g">
+		<div class="pure-u-1-2">
+			<article>
+				<p>This is my niceley formatted content that I've written to test this design.</p>
+				<p>It all fits perfectly into my ideal layout so there won't be any problem.</p>
+				<p>I haven't thought about testing this with any other content.</p>
+			</article>
+		</div>
+		<div class="pure-u-1-2">
+			<article>
+				<p>I don't need to test this with any other content, that's a waste of time!</p>
+				<p>What are the chances that a client would edit the content and make it bigger?</p>
+				<p>Practically zero, that's what, and as for smaller, that's less likely.</p>
+			</article>
+		</div>
+	</div>
+	<article class="full-width">
+		This is special content
+	</article>
+</main>
+<script type="text/javascript" src="../lorem-compiled.js"></script>
+<script type="text/javascript">
+	(function () {
+		var rules = [
+			{
+				selector: "main p:first-of-type",
+				numLines: [1, 2],
+				maxLength: 64,
+			},
+			{
+				selector: "main p:not(:first-of-type)",
+				numLines: [3, 5]
+			},
+			{
+				selector: '.full-width',
+				numLines: [1,2]
+			}
+		];
+
+		var lorem = new Lorem({rules: rules});
+		lorem.processRules();
+
+	})();
+</script>
+</body>
+</html>
