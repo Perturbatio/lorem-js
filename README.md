@@ -5,12 +5,17 @@
 ```javascript
 		var rules = [
 			{
-				selector: "main p:first-of-type",
-				numLines: [1, 2]
+				selector: "main h1",
+				numLines: [1, 2],
+				maxLength: 32,
 			},
 			{
-				selector: "main p:not(:first-of-type)",
-				numLines: [3, 8]
+				selector: "main p",
+				numLines: [3, 5]
+			},
+			{
+				selector: '.full-width',
+				numLines: [1,2]
 			}
 		];
 
