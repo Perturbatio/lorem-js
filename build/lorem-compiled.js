@@ -1,15 +1,11 @@
 'use strict';
 
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
 /**
  *
  */
 
 var Lorem = function () {
-	_createClass(Lorem, [{
+	babelHelpers.createClass(Lorem, [{
 		key: 'data',
 
 
@@ -62,7 +58,7 @@ var Lorem = function () {
 	}]);
 
 	function Lorem(config) {
-		_classCallCheck(this, Lorem);
+		babelHelpers.classCallCheck(this, Lorem);
 
 		config = config || {};
 		this._rules = config['rules'] || [];
@@ -99,7 +95,7 @@ var Lorem = function () {
   */
 
 
-	_createClass(Lorem, [{
+	babelHelpers.createClass(Lorem, [{
 		key: 'processRules',
 		value: function processRules(rules) {
 			var me = this;
@@ -225,7 +221,6 @@ var Lorem = function () {
 			}
 		}
 	}]);
-
 	return Lorem;
 }();
 
